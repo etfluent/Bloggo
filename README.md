@@ -10,4 +10,5 @@ So Far
 
 10/28/2018
 - Began building out new post interface
-- Normalized css and updated font so my eyes stop bleeding
+- Normalized css and updated fonts and a few other things so my eyes stop bleeding
+- uploaded test db to SQL folder in repo
