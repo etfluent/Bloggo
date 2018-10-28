@@ -1,3 +1,12 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Roboto');
+body {
+	font-family: 'Bree Serif', serif;
+}
+body p {
+	font-family: 'Roboto', sans-serif;
+}
+/* End Google Fonts */
 /* W3.CSS 4.11 October 2018 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
@@ -25,7 +34,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 ::-webkit-input-placeholder{color:inherit;opacity:0.54}
 ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
 /* End extract */
-#post_list > .post {
+#post_list .post {
     background-color: white;
     display: block;
 	border: 1px solid black;
@@ -37,7 +46,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 #post_list {
 	display: block;
 	padding: 2% 2px;
-	background-color: red;
+	background-color: #F06560;
 	border: 1px solid black;
 }
 
