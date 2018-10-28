@@ -1,8 +1,5 @@
 <!-- Post List -->
 <?php
-// required headers
-// header("Access-Control-Allow-Origin: *");
-// header("Content-Type: application/json; charset=UTF-8");
  
 // include database and object files
 include("./config/database.php");
@@ -51,12 +48,14 @@ if ($num>0){
 
     // display HTML
     include('./includes/newpost_card.php');
-    echo '<div id="post_list">';
-    foreach ($posts_arr as $p){
+    echo '<div id="post_list"><div id="posts">';
+    // array_reverse to get most recent post
+    foreach (array_reverse($posts_arr) as $p){
         echo '<div class="post"><h6>Title:</h6><h3>' . $p["title"] . '</h3><h6>Text:</h6><p>' . $p["text"] . '<br><br></div>';
     }
     echo '</div>';
     include('./includes/newpost_button.php');
+    echo '</div>';
 }
  
 else{
