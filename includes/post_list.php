@@ -1,3 +1,4 @@
+<!-- Post List -->
 <?php
 // required headers
 // header("Access-Control-Allow-Origin: *");
@@ -23,7 +24,6 @@ if ($num>0){
  
     // posts array
     $posts_arr=array();
-    $posts_arr["records"]=array();
  
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -40,7 +40,7 @@ if ($num>0){
             "text" => $text,
         );
  
-        array_push($posts_arr["records"], $post_item);
+        array_push($posts_arr, $post_item);
     }
  
     // set response code - 200 OK
@@ -50,9 +50,13 @@ if ($num>0){
     // echo json_encode($posts_arr);
 
     // display HTML
-    foreach ($posts_arr["records"] as $p){
+    include('./includes/newpost_card.php');
+    echo '<div id="post_list">';
+    foreach ($posts_arr as $p){
         echo '<div class="post"><h6>Title:</h6><h3>' . $p["title"] . '</h3><h6>Text:</h6><p>' . $p["text"] . '<br><br></div>';
     }
+    echo '</div>';
+    include('./includes/newpost_button.php');
 }
  
 else{

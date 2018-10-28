@@ -1,3 +1,4 @@
+<!-- Header -->
 <!doctype html>
 <head>
 <meta charset="utf-8">
@@ -8,6 +9,7 @@
 
 <meta name="author" content="author name">
 <link rel="stylesheet" type="text/css" href="./styles/style.css">
+<script src="./js/newpost.js"></script>
 </head>
 <body>
 <header>
