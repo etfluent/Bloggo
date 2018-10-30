@@ -2,10 +2,10 @@
 class Database{
  
     // specify database credentials
-    private $host = "localhost";
-    private $db_name = "Bloggo_db";
-    private $username = "root";
-    private $password = "";
+    public $host = "localhost";
+    public $db_name = "Bloggo_db";
+    public $username = "root";
+    public $password = "";
     public $conn;
  
     // get the database connection

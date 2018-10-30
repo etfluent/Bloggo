@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2018 at 12:20 AM
+-- Generation Time: Oct 30, 2018 at 03:01 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `posts` (
   `postID` int(11) NOT NULL,
-  `title` varchar(25) DEFAULT NULL,
-  `text` varchar(2000) DEFAULT NULL
+  `title` varchar(100) NOT NULL,
+  `text` varchar(400) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -39,8 +39,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`postID`, `title`, `text`) VALUES
-(1, 'Number One', 'This is the first post!'),
-(2, 'Number Two', 'This is the second post. Wow!');
+(1, 'POST 1', 'This is the first post'),
+(2, 'Test Post', 'This is a test post'),
+(3, 'Test Post 2', 'This is 222222222222');
 
 --
 -- Indexes for dumped tables
@@ -51,6 +52,16 @@ INSERT INTO `posts` (`postID`, `title`, `text`) VALUES
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`postID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `postID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

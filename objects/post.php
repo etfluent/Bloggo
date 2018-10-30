@@ -1,9 +1,9 @@
 <?php
 class Post{
 
-    // database connection and table name
+    // database connection and table
     private $conn;
-    private $table_name = "posts";
+    public $table_name = "posts";
 
     // object properties
     public $postID;
@@ -30,5 +30,4 @@ class Post{
      
         return $stmt;
     }
-
 };

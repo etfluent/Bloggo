@@ -15,12 +15,12 @@ $post = new Post($db);
 // query posts
 $stmt = $post->read();
 $num = $stmt->rowCount();
+
+// posts array
+$posts_arr=array();
  
 // check if more than 0 record found
 if ($num>0){
- 
-    // posts array
-    $posts_arr=array();
  
     // retrieve our table contents
     // fetch() is faster than fetchAll()
