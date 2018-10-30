@@ -12,3 +12,7 @@ So Far
 - Began building out new post interface
 - Normalized css and updated fonts and a few other things so my eyes stop bleeding
 - Uploaded test db to SQL folder in repo
+
+10/29/2018
+- Added ability to create new posts (*need to prevent SQLinjection*)
+- updated SQL db table to autoincrement postID when new post is created
