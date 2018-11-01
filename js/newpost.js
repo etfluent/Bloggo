@@ -6,7 +6,3 @@ function newPostCardOn() {
 function newPostCardOff() {
     document.getElementById("overlay").style.display = "none";
 }
-
-function createNewPost() {
-
-}

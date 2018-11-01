@@ -16,3 +16,8 @@ So Far
 10/29/2018
 - Added ability to create new posts (*need to prevent SQLinjection*)
 - updated SQL db table to autoincrement postID when new post is created
+
+10/31/2018
+- Cleaned up some code and removed some unnecessary files created during initial file structure buildout
+- Prevented SQL injection when creating new posts
+- Added homepage redirect header to newpost.php

@@ -42,9 +42,6 @@ if ($num>0){
  
     // set response code - 200 OK
     http_response_code(200);
- 
-    // show posts data in json format
-    // echo json_encode($posts_arr);
 
     // display HTML
     include('./includes/newpost_card.php');

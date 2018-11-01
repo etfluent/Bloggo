@@ -12,12 +12,17 @@ $post = new Post($db);
 // POST variables from form 
 $title = $_POST['title'];
 $text = $_POST['text'];
-
-$sql = "INSERT INTO " . $post->table_name . " (title, text) VALUES ('$title', '$text')";
-if(!mysqli_query($con,$sql)) {
-    echo 'Data not inserted';
+// initialize PDO
+$pdo = $db->getConnection();
+// echo fetch($pdo);
+// prepare SQL statement to prevent SQL injection
+$stmt = $pdo->prepare("INSERT INTO " . $post->table_name . " (title, text) VALUES ('$title', '$text')");
+// execute SQL statement
+if (!$stmt->execute(array('title' => $title, 'text' => $text))) {
+    echo "not inserted";
 } else {
-    echo 'Data inserted';
-}     
-      
+    echo "data inserted";
+}
+
+header( "refresh:4;url=.." );
 ?>
