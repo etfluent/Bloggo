@@ -20,4 +20,5 @@ So Far
 10/31/2018
 - Cleaned up some code and removed some unnecessary files created during initial file structure buildout
 - Prevented SQL injection when creating new posts
-- Added homepage redirect header to newpost.php
+- Added homepage redirect header to new_post.php
+- Got rid of mysqli statements in new_post.php and set db class config properties back to private
